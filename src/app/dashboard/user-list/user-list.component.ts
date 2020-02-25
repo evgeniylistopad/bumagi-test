@@ -23,6 +23,7 @@ export class UserListComponent implements OnInit {
 
   users: User[] = [];
   loading: boolean;
+  firstLoad: boolean;
 
   private reload: Subscription;
   private destroy$: Subject<void> = new Subject();
@@ -33,6 +34,7 @@ export class UserListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.firstLoad = true;
     this.loading = true;
     this.startReload();
   }
@@ -126,8 +128,9 @@ export class UserListComponent implements OnInit {
             this.updateUsers(data);
           } else if (data instanceof Array) {
             this.users = data;
-          } else if (this.users.length == 0) {
-            this.toastService.show({ text: (data as any).message });
+          } else if (this.users.length == 0 && this.firstLoad) {
+            this.toastService.show({ text: (data as any).message })
+            this.firstLoad = false;
             this.loading = true;
           }
         },
