@@ -4,7 +4,13 @@
         <img class="arrow" [ngClass]="{'show': isShow}" src='assets/dropdownArrow.svg' alt="arrow">
     </div>
     <div class="dropdown-content" [ngClass]="{'show': isShow}">
-      <div class="option" *ngFor="let option of options" (click)="select(option)">{{ option.label }}</div>
+      <div class="option"
+        *ngFor="let option of options"
+        [ngClass]="{ 'option-hover': option.value === hoveredValue }"
+        (click)="select(option)"
+        (mouseenter)="hover(option.value)">
+        {{ option.label }}
+      </div>
     </div>
 </div>
   

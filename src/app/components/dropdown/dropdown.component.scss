@@ -51,9 +51,13 @@
   color: #d0c9d6;
 }
 
-.dropdown-content .option:hover {
-  color: #3f3356;
+.option-hover {
+  color: #3f3356 !important;
 }
+
+// .dropdown-content .option:hover {
+//   color: #3f3356;
+// }
 
 .show {
   img.arrow {
