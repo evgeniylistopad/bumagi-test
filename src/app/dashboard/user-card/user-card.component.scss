@@ -38,17 +38,21 @@
 
 .status {
   position: relative;
-  width: 160px;
+  width: 180px;
   margin-right: 46px;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 
-  img {
-    position: absolute;
-    color: #3f3356;
-    height: 6.46px;
-    width: 9.65px;
-    position: absolute;
-    right: 0px;
+  span {
+    width: 160px;
+    display: flex;
+    align-items: center;
+
+    img {
+      position: absolute;
+      color: #3f3356;
+      position: absolute;
+      right: 0px;
+    }
   }
 }

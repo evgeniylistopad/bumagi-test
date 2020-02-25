@@ -3,9 +3,11 @@
     <span class="name text-overflow">{{user | name}}</span>
     <span class="balance text-overflow">{{user | balance}}</span>
     <span class="last-update text-overflow">{{user | lastUpdate}}</span>
-    <div class="status text-overflow">
-        <span>{{user | status }}</span>
-        <img src="assets/dropdownArrow.svg" alt="arrow">
+    <div class="status">
+        <span class="text-overflow">{{user | status }}
+            <img src="assets/dropdownArrow.svg" alt="arrow">
+        </span>
+        
     </div>
 </div>
 
