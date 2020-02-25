@@ -1,0 +1,20 @@
+<div class="edit-container">
+  <div class="header">
+    <span>{{ header }}</span>
+    <img src="assets/closeModal.svg" (click)="close()" alt="close" />
+  </div>
+  <form [formGroup]="editUserForm">
+    <div class="inputs">
+      <input class="font" formControlName="name" type="text" />
+      <input class="font" formControlName="fname" type="text" />
+      <input class="font" formControlName="mname" type="text" />
+    </div>
+    <dropdown
+      formControlName="status"
+      [options]="statusOptions"
+      [defaultValue]="user.status"
+    ></dropdown>
+  </form>
+
+  <button class="font" (click)="save()">Сохранить</button>
+</div>

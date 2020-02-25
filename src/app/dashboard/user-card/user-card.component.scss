@@ -1,0 +1,54 @@
+.user-card-container {
+  height: 80px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin: 0 48px 18px 48px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin: 16px;
+  width: 48px;
+  height: 48px;
+}
+
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  width: 160px;
+}
+
+.balance {
+  margin-left: 44px;
+  flex: 1;
+}
+
+.last-update {
+  color: #a8a8a8;
+  margin-right: 54px;
+  width: 360px;
+}
+
+.status {
+  position: relative;
+  width: 160px;
+  margin-right: 46px;
+  display: flex;
+  align-items: center;
+
+  img {
+    position: absolute;
+    color: #3f3356;
+    height: 6.46px;
+    width: 9.65px;
+    position: absolute;
+    right: 0px;
+  }
+}

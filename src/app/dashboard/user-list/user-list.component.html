@@ -1,0 +1,10 @@
+<div class="users-container">
+  <loader [backdropEnabled]="false" [displayProgressLoader]="loading"></loader>
+  <user-card
+    *ngFor="let user of users"
+    [user]="user"
+    (userChanged)="userUpdate($event)"
+    (dialogOpened)="stopReload()"
+    (dialogClosed)="startReload()"
+  ></user-card>
+</div>

@@ -1,0 +1,11 @@
+<tabs (activeTab)="onActiveTab($event)">
+    <tab [tabTitle]="'Все'">
+        <user-list *ngIf="status===null" [status]="status"></user-list>
+    </tab>
+    <tab [tabTitle]="'Заблокированные'">
+        <user-list *ngIf="status===2" [status]="status"></user-list>
+    </tab>
+    <tab [tabTitle]="'Активные'">
+        <user-list  *ngIf="status===0" [status]="status"></user-list>
+    </tab>
+</tabs>

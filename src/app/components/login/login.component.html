@@ -1,0 +1,16 @@
+<div class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input class="form-control text" formControlName="login" type="text">
+        </div>
+        <div *ngIf="submitted && f.login.errors">
+            <div class="text error-text" *ngIf="f.login.errors.required">Email is required</div>
+            <div class="text error-text" *ngIf="f.login.errors.email">Email must be a valid email address</div>
+        </div>
+        <div class="form-group">
+            <input class="form-control text input-password" formControlName="password" [type]="inputType">
+            <img class="input-icon" (click)="changeInputType()" [src]='getScrIcon()' alt='eye'>
+        </div>
+        <button class="form-control btn-text">ВОЙТИ</button>
+    </form>
+</div>

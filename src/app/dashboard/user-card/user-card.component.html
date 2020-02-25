@@ -1,0 +1,14 @@
+<div class="user-card-container" (click)="openDialog()">
+    <img class="avatar" *ngIf="avatarUrl$ | async as url else fromAssets" [src]="url" alt="avatar">
+    <span class="name text-overflow">{{user | name}}</span>
+    <span class="balance text-overflow">{{user | balance}}</span>
+    <span class="last-update text-overflow">{{user | lastUpdate}}</span>
+    <div class="status text-overflow">
+        <span>{{user | status }}</span>
+        <img src="assets/dropdownArrow.svg" alt="arrow">
+    </div>
+</div>
+
+<ng-template #fromAssets>
+    <img class="avatar" src="assets/avatar.svg" alt="avatar">
+</ng-template>

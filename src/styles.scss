@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/cdk/overlay";
+@include cdk-overlay();
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+@font-face {
+	font-family: 'fontello';
+	src: url('./assets/fonts/webkit-pass-icon/fontello.eot?0000');
+	src: url('./assets/fonts/webkit-pass-icon/fontello.eot?0000#iefix') format('embedded-opentype'),
+	     url('./assets/fonts/webkit-pass-icon/fontello.woff2?0000') format('woff2'),
+	     url('./assets/fonts/webkit-pass-icon/fontello.woff?0000') format('woff'),
+	     url('./assets/fonts/webkit-pass-icon/fontello.ttf?0000') format('truetype'),
+	     url('./assets/fonts/webkit-pass-icon/fontello.svg?0000#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    margin: 0px;
+    height: 100vh;
+    background: #F7F7F7;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.backdropBackground {
+    background-color: rgba(63, 51, 86, 0.4);
+}
+
+.user-edit-dialog-container {
+	mat-dialog-container {
+		padding: 0;
+		width: 916px;
+		height: 573px;
+		background:#FFFFFF;
+		box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+		border-radius: 12px;
+    }	
+}
